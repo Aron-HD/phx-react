@@ -27,6 +27,11 @@ defmodule PhxReactWeb.Router do
     get "/health", HealthController, :index
   end
 
+  scope "/app", PhxReactWeb do
+    get "/", WebappController, :index
+    get "/*path", WebappController, :index
+  end
+
   # Enables LiveDashboard only for development
   #
   # If you want to use the LiveDashboard in production, you should put
