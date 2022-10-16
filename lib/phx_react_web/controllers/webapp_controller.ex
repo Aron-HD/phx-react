@@ -12,7 +12,7 @@ defmodule PhxReactWeb.WebappController do
   # Potential improvement: Cache the file contents here
   # in an ETS table so we don't read from the disk for every request.
   defp render_vue_app() do
-    Application.app_dir(:phx_react, "priv/static/webapp/index.html")
+    Application.app_dir(:phx_react, "/priv/static/webapp/dist/index.html")
     |> File.read!()
   end
 end
