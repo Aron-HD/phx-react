@@ -27,4 +27,5 @@ erl_crash.dump
 
 /priv/static/assets/
 /priv/static/webapp/
+/priv/cert/
 
