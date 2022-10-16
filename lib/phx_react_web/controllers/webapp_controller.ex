@@ -3,7 +3,7 @@ defmodule PhxReactWeb.WebappController do
 
   def index(conn, _params) do
     conn
-    |> send_resp(200, render_react_app())
+    |> send_resp(200, render_vue_app())
   end
 
   # Serve the index.html file as-is and let React
@@ -11,7 +11,7 @@ defmodule PhxReactWeb.WebappController do
   #
   # Potential improvement: Cache the file contents here
   # in an ETS table so we don't read from the disk for every request.
-  defp render_react_app() do
+  defp render_vue_app() do
     Application.app_dir(:phx_react, "priv/static/webapp/index.html")
     |> File.read!()
   end
