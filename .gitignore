@@ -25,3 +25,8 @@ erl_crash.dump
 # secret files
 **/*.secret.exs
 
+/priv/static/webapp/
+/priv/static/assets/
+
+/frontend/node_modules
+/frontend/dist
